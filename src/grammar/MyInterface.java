@@ -12,9 +12,10 @@ import javax.swing.event.ListSelectionListener;
  *  5.一个类可以实现(implements)多个接口,但只能继承（extends）一个类。
  *
  */
-public interface MyInterface extends ListDataListener, ListSelectionListener {
+public interface MyInterface //extends ListDataListener, ListSelectionListener
+{
     public static String strStatic="static";  //实际上是 public static final String strStatic="static";
     public final String strFinal="final";
-    void say(); //实际上是 public 级别的访问权限。
+    void say(String s); //实际上是 public 级别的访问权限。
 }
 

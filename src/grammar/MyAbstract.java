@@ -15,7 +15,7 @@ public abstract class MyAbstract extends Grammar implements MyInterface{
         this.string = string;
     }
     @Override
-    public  void say(){
+    public  void say(String s){
         System.out.println("可以");
     }
     public  void say1(){
