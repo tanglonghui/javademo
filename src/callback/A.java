@@ -13,4 +13,10 @@ public class A {
             System.out.println("A 做其他的事，如看电视" + i);
         }
     }
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("回收");
+        super.finalize();
+
+    }
 }

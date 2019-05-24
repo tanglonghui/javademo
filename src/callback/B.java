@@ -5,7 +5,7 @@ import java.util.Random;
 public class B {
     private CallBack callBack;
 
-    Boolean doSomeThing(String str) {
+    private Boolean doSomeThing(String str) {
         for (int i = 0; i < new Random().nextInt(20); i++) {
             System.out.println("B 正在执行任务：" + str+"--"+i);
             if (i>10){
@@ -31,5 +31,11 @@ public class B {
             }
         }).start();
 
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("回收");
+        super.finalize();
     }
 }
