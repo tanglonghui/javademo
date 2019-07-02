@@ -9,5 +9,12 @@ public class Test {
         System.out.println(" s1=s2 ?:"+(s1==s2));
         StringBuilder sb1=new StringBuilder();
         sb1.append(1);
+        String scanStr="1.2.3.4-5:6";
+        String[] strings=scanStr.split("\\.|-|:");
+        System.out.println(strings.toString());
+        for (int i=0;i<strings.length;i++){
+            System.out.println(strings[i]);
+        }
+        System.out.println("s");
     }
 }
